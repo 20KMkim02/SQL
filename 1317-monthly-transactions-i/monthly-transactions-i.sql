@@ -7,4 +7,5 @@ DATE_FORMAT(trans_date, '%Y-%m') as month
 , sum(T.amount) as trans_total_amount
 , sum(case when T.state = 'approved' then T.amount else 0 end) as approved_total_amount
 from Transactions T
-group by month , T.country 
+group by month , T.country ;
+# case when <Condition> then <Numb1> else <Numb2> อย่าลืมจบด้วย end
